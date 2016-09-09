@@ -21,6 +21,7 @@
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
             {{ Form::submit('Save changes', ['class' => 'btn btn-default']) }}
+            <a class="btn btn-default" href="{{ URL::to('/users') }}">Go back</a>
           </div>
         </div>
       </form>

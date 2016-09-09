@@ -1,18 +1,14 @@
 @extends('layouts.app')
 
-@section('script')
-
-@stop
-
 @section('content')
 <div class="container-fluid">
   <div class="panel panel-default">
-    <div class="pull-right">
-        <div class="btn-group">
-            <a class="btn btn-sm btn-primary" href="{{ URL::to('/users/create') }}">New User</a>
-        </div>
-    </div>
     <div class="panel-body">
+      <div class="pull-right">
+          <div class="btn-group">
+              <a class="btn btn-sm btn-primary" href="{{ URL::to('/users/create') }}">New User</a>
+          </div>
+      </div>
       <table class="table table-condensed">
         <thead>
           <tr>
@@ -40,4 +36,12 @@
     </div>
   </div>
 </div>
-@stop
+
+<script type="text/javascript">
+  function deleteFunc(e) {
+    if(!(confirm('Tem certeza que deseja fazer isso?'))) {
+      e.preventDefault();
+    }
+  }
+</script>
+@endsection

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('script')
+
+@stop
+
 @section('content')
 <div class="container-fluid">
   <div class="panel panel-default">

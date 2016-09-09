@@ -81,7 +81,9 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $inputs = $request->all();
+        $this->usersRep->update($inputs, $id);
+        return redirect('/users');
     }
 
     /**
@@ -92,6 +94,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->usersRep->delete($id);
+        return redirect('/users');
     }
 }

@@ -30,4 +30,19 @@ class UsersRepository
     $user = $this->users->find($id);
     return $user['attributes'];
   }
+
+  public function update($data, $id)
+  {
+    $user = $this->users->find($id);
+    $user->update($data);
+    return $user;
+  }
+
+  public function delete($id)
+  {
+    $user = $this->users->find($id);
+    $user->delete();
+    return true;
+  }
+
 }

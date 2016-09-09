@@ -5,7 +5,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">Edit User</div>
     <div class="panel-body">
-      {{ Form::open(['url' => '/users/update', 'method' => 'post', 'class' => 'form-horizontal '])}}
+      {{ Form::open(['url' => '/users/'. $user['id'] .'/update', 'method' => 'post', 'class' => 'form-horizontal '])}}
         <div class="form-group">
           {{ Form::label('email', 'Email', ['class' => 'col-md-2 control-label'])}}
           <div class="col-md-10">

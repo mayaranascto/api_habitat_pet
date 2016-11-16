@@ -73,14 +73,14 @@
           </div>
         </div>
         <div class="form-group">
-          {{ Form::label('status', 'Status', ['class' => 'col-md-2 control-label'])}}
+          {{ Form::label('foto_planta', 'Fota da Planta', ['class' => 'col-md-2 control-label'])}}
           <div class="col-md-10">
-          {{ Form::file('foto_planta', ['class' => 'form-control', 'placeholder' => 'Escolha uma opção']) }}
+          {{ Form::file('foto_planta', ['class' => 'form-control', 'placeholder' => 'Escolha um arquivo']) }}
           </div>
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            {{ Form::submit('Save', ['class' => 'btn btn-default']) }}
+            {{ Form::submit('Salvar', ['class' => 'btn btn-default']) }}
           </div>
         </div>
       </form>

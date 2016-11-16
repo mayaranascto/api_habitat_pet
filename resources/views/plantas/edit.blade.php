@@ -80,7 +80,7 @@
         </div>
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
-            {{ Form::submit('Save', ['class' => 'btn btn-default']) }}
+            {{ Form::submit('Salvar Alterações', ['class' => 'btn btn-default']) }}
           </div>
         </div>
       </form>

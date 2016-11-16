@@ -10,6 +10,7 @@
                 <div class="panel-body">
                     <a href="/users"><button type="button" name="button">Usuários</button></a>
                     <a href="/plantas"><button type="button" name="button">Plantas</button></a>
+                    <a href="/peixes"><button type="button" name="button">Peixes</button></a>
                 </div>
             </div>
         </div>

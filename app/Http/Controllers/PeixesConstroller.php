@@ -5,82 +5,60 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Repositories\PeixesRepository;
 
 class PeixesConstroller extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    protected $peixesRep;
+
+    public function __construct(PeixesRepository $peixesRep)
+    {
+      $this->peixesRep = $peixesRep;
+    }
+
     public function index()
     {
-        //
+        return view('peixes/index', array(
+          'peixes' => $this->peixesRep->getAll(),
+        ));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('peixes/create', array());
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $peixe_data = $request->all();
+        $foto_peixe = $request->file('foto_peixe');
+        $foto_peixe->move('/var/www/html/habitatpetWs/serverside/imgs/iPeixes/', $foto_peixe->getClientOriginalName());
+        $this->peixesRep->store($peixe_data);
+        return redirect('/peixes');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        return view('peixes/edit', array(
+          'peixe' => $this->peixesRep->getById($id),
+        ));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $new_data_peixe = $request->all();
+        $this->peixesRep->update($new_data_peixe, $id);
+        return redirect('/peixes');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $this->peixesRep->destroy($id);
+        return redirect('/peixes');
     }
 }

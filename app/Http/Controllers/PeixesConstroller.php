@@ -5,23 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Repositories\UsersRepository;
 
-class UsersController extends Controller
+class PeixesConstroller extends Controller
 {
-
-    protected $usersRep;
-
-    public function __construct(UsersRepository $usersRep)
-    {
-      $this->usersRep = $usersRep;
-    }
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('users.index', array(
-          'users' => $this->usersRep->getAll(),
-        ));
+        //
     }
 
     /**
@@ -31,7 +25,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('users.create', array());
+        //
     }
 
     /**
@@ -42,10 +36,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $inputs = $request->all();
-        $inputs['password'] = bcrypt($inputs['password']);
-        $this->usersRep->store($inputs);
-        return redirect('/users');
+        //
     }
 
     /**
@@ -67,9 +58,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        return view('users.edit', array(
-          'user' => $this->usersRep->getUser($id),
-        ));
+        //
     }
 
     /**
@@ -81,14 +70,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-<<<<<<< HEAD
-        $inputs = $request->all();
-        $this->usersRep->update($inputs, $id);
-        return redirect('/users');
-=======
-        var_dump($id);
-        die();
->>>>>>> Crud de Plantas
+        //
     }
 
     /**
@@ -99,7 +81,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $this->usersRep->delete($id);
-        return redirect('/users');
+        //
     }
 }

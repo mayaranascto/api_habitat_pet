@@ -20,4 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('/users', 'UsersController');
-Route::post('/users/{id}/update', 'UsersController@update');
+Route::resource('/plantas', 'PlantasConstroller');
+Route::resource('/peixes', 'PeixesConstroller');

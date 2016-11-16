@@ -8,7 +8,8 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    <a href="/users"><button type="button" name="button">Users</button></a>
+                    <a href="/users"><button type="button" name="button">Usuários</button></a>
+                    <a href="/plantas"><button type="button" name="button">Plantas</button></a>
                 </div>
             </div>
         </div>

@@ -42,4 +42,12 @@
     </div>
   </div>
 </div>
-@stop
+
+<script type="text/javascript">
+  function deleteFunc(e) {
+    if(!(confirm('Tem certeza que deseja fazer isso?'))) {
+      e.preventDefault();
+    }
+  }
+</script>
+@endsection

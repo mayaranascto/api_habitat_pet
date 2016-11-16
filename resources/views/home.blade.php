@@ -11,6 +11,7 @@
                     <a href="/users"><button type="button" name="button">Usuários</button></a>
                     <a href="/plantas"><button type="button" name="button">Plantas</button></a>
                     <a href="/peixes"><button type="button" name="button">Peixes</button></a>
+                    <a href="/produtos"><button type="button" name="button">Produtos</button></a>
                 </div>
             </div>
         </div>

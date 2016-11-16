@@ -81,14 +81,9 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-<<<<<<< HEAD
         $inputs = $request->all();
         $this->usersRep->update($inputs, $id);
         return redirect('/users');
-=======
-        var_dump($id);
-        die();
->>>>>>> Crud de Plantas
     }
 
     /**

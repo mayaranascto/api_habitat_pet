@@ -14,16 +14,16 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> -->
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    <link href="/css/AdminLTE.css" rel="stylesheet">
-    <link href="/css/skins/_all-skins.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/AdminLTE.css" rel="stylesheet">
+    <link href="css/skins/_all-skins.css" rel="stylesheet">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
     <!-- Scripts -->
     <script>
@@ -103,7 +103,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/users"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
+                <li><a href="{{ url('/users') }}"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
               </ul>
             </li>
             <li  class="treeview">
@@ -115,8 +115,8 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/plantas"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
-                <li><a href="/plantas/create"><i class="fa fa-circle-o text-yellow"></i>Criar Nova</a></li>
+                <li><a href="{{ url('/plantas') }}"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
+                <li><a href="{{ url('/plantas/create') }}"><i class="fa fa-circle-o text-yellow"></i>Criar Nova</a></li>
               </ul>
             </li>
             <li>
@@ -128,8 +128,8 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/peixes"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
-                <li><a href="/peixes/create"><i class="fa fa-circle-o text-yellow"></i>Criar Novo</a></li>
+                <li><a href="{{ url('/peixes') }}"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
+                <li><a href="{{ url('/peixes/create') }}"><i class="fa fa-circle-o text-yellow"></i>Criar Novo</a></li>
               </ul>
             </li>
             <li>
@@ -141,8 +141,8 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/produtos"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
-                <li><a href="/produtos/create"><i class="fa fa-circle-o text-yellow"></i>Criar Novo</a></li>
+                <li><a href="{{ url('/produtos') }}"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
+                <li><a href="{{ url('/produtos/create') }}"><i class="fa fa-circle-o text-yellow"></i>Criar Novo</a></li>
               </ul>
             </li>
             <li>
@@ -154,8 +154,8 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/user"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
-                <li><a href="/register"><i class="fa fa-circle-o text-yellow"></i>Criar Novo</a></li>
+                <li><a href="{{ url('/user') }}"><i class="fa fa-circle-o text-red"></i>Ver Todos</a></li>
+                <li><a href="{{ url('/register') }}"><i class="fa fa-circle-o text-yellow"></i>Criar Novo</a></li>
               </ul>
             </li>
           </ul>
@@ -170,13 +170,13 @@
 
 
     <!-- Scripts -->
-    <!-- <script src="/js/app.js"></script> -->
+    <!-- <script src="js/app.js"></script> -->
     <!-- jQuery -->
-    <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <script src="/js/bootstrap.js"></script>
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/app-adm.js"></script>
-    <script src="/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
-    <script src="/plugins/fastclick/fastclick.js"></script>
+    <script src="plugins/fastclick/fastclick.js"></script>
 </body>
 </html>

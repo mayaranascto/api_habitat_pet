@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Repositories\PeixesRepository;
+use App\Peixes;
 
 class PeixesConstroller extends Controller
 {
@@ -19,7 +20,7 @@ class PeixesConstroller extends Controller
     public function index()
     {
         return view('peixes/index', array(
-          'peixes' => $this->peixesRep->getAll(),
+          'peixes' => Peixes::paginate(5),
         ));
     }
 
@@ -32,7 +33,9 @@ class PeixesConstroller extends Controller
     {
         $peixe_data = $request->all();
         $foto_peixe = $request->file('foto_peixe');
-        $foto_peixe->move('/var/www/html/habitatpetWs/serverside/imgs/iPeixes/', $foto_peixe->getClientOriginalName());
+        $name = $foto_peixe->getClientOriginalName();
+        $foto_peixe->move('/var/www/html/habitatpetWs/serverside/imgs/iPeixes/', $name);
+        $peixe_data['foto_peixe'] = $name;
         $this->peixesRep->store($peixe_data);
         return redirect('/peixes');
     }
@@ -52,6 +55,10 @@ class PeixesConstroller extends Controller
     public function update(Request $request, $id)
     {
         $new_data_peixe = $request->all();
+        $foto_peixe = $request->file('foto_peixe');
+        $name = $foto_peixe->getClientOriginalName();
+        $foto_peixe->move('/var/www/html/habitatpetWs/serverside/imgs/iPeixes/', $name);
+        $peixe_data['foto_peixe'] = $name;
         $this->peixesRep->update($new_data_peixe, $id);
         return redirect('/peixes');
     }

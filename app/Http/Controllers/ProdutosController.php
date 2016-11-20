@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Repositories\ProdutosRepository;
+use App\Produtos;
 
 class ProdutosController extends Controller
 {
@@ -19,7 +20,7 @@ class ProdutosController extends Controller
     public function index()
     {
         return view('produtos/index', array(
-          'produtos' => $this->produtosRep->getAll(),
+          'produtos' => Produtos::paginate(5),
         ));
     }
 
@@ -32,7 +33,9 @@ class ProdutosController extends Controller
     {
         $produto_data = $request->all();
         $foto_produto = $request->file('foto_produto');
-        $foto_produto->move('/var/www/html/habitatpetWs/serverside/imgs/iProdutos/', $foto_produto->getClientOriginalName());
+        $name = $foto_produto->getClientOriginalName();
+        $foto_produto->move('/var/www/html/habitatpetWs/serverside/imgs/iProdutos/', $name);
+        $produto_data['foto_produto'] = $name;
         $this->produtosRep->store($produto_data);
         return redirect('/produtos');
     }
@@ -52,6 +55,10 @@ class ProdutosController extends Controller
     public function update(Request $request, $id)
     {
         $new_data_produto = $request->all();
+        $foto_produto = $request->file('foto_produto');
+        $name = $foto_produto->getClientOriginalName();
+        $foto_produto->move('/var/www/html/habitatpetWs/serverside/imgs/iProdutos/', $name);
+        $produto_data['foto_produto'] = $name;
         $this->produtosRep->update($new_data_produto, $id);
         return redirect('/produtos');
     }

@@ -23,3 +23,4 @@ Route::resource('/users', 'UsersController');
 Route::resource('/plantas', 'PlantasConstroller');
 Route::resource('/peixes', 'PeixesConstroller');
 Route::resource('/produtos', 'ProdutosController');
+Route::resource('/user', 'UserController');

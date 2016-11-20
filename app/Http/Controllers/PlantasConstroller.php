@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Repositories\PlantasRepository;
+use App\Plantas;
 
 class PlantasConstroller extends Controller
 {
@@ -20,7 +21,7 @@ class PlantasConstroller extends Controller
     public function index()
     {
         return view('plantas/index', array(
-          'plantas' => $this->plantasRep->getAll(),
+          'plantas' => Plantas::paginate(5),
         ));
     }
 
@@ -33,7 +34,9 @@ class PlantasConstroller extends Controller
     {
         $planta_data = $request->all();
         $foto_planta = $request->file('foto_planta');
-        $foto_planta->move('/var/www/html/habitatpetWs/serverside/imgs/iPlantas/', $foto_planta->getClientOriginalName());
+        $name = $foto_planta->getClientOriginalName();
+        $foto_planta->move('/var/www/html/habitatpetWs/serverside/imgs/iPlantas/', $name);
+        $planta_data['foto_planta'] = $name;
         $this->plantasRep->store($planta_data);
         return redirect('/plantas');
     }
@@ -53,6 +56,10 @@ class PlantasConstroller extends Controller
     public function update(Request $request, $id)
     {
         $new_data_planta = $request->all();
+        $foto_planta = $request->file('foto_planta');
+        $name = $foto_planta->getClientOriginalName();
+        $foto_planta->move('/var/www/html/habitatpetWs/serverside/imgs/iPlantas/', $name);
+        $planta_data['foto_planta'] = $name;
         $this->plantasRep->update($new_data_planta, $id);
         return redirect('/plantas');
     }

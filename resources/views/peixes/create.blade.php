@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
+<div class="container">
   <div class="panel panel-default">
     <div class="panel-heading">Nova Planta</div>
     <div class="panel-body">
@@ -63,7 +63,7 @@
         <div class="form-group">
           {{ Form::label('status', 'Status', ['class' => 'col-md-2 control-label'])}}
           <div class="col-md-10">
-          {{ Form::select('status', ['Dísponivel' => 'Dísponivel', 'Não Dísponivel' => 'Não Dísponivel'], null, ['class' => 'form-control', 'placeholder' => 'Escolha uma opção']) }}
+          {{ Form::select('status', ['Sim' => 'Dísponivel', 'Não' => 'Não Dísponivel'], null, ['class' => 'form-control', 'placeholder' => 'Escolha uma opção']) }}
           </div>
         </div>
         <div class="form-group">

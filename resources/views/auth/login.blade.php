@@ -13,15 +13,14 @@
 
             <!-- <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} has-feedback"> -->
                 <!-- <label for="email" class="col-md-4 control-label">E-Mail Address</label> -->
-
+                @if ($errors->has('email'))
+                    <span class="help-block text-center">
+                        <strong class="text-red">{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
                 <div class="form-group has-feedback">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
-                    @if ($errors->has('email'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                    @endif
                 </div>
             <!-- </div> -->
 

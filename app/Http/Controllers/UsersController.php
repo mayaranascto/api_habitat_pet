@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Repositories\UsersRepository;
+use App\Users;
 
 class UsersController extends Controller
 {
@@ -20,7 +21,7 @@ class UsersController extends Controller
     public function index()
     {
         return view('users.index', array(
-          'users' => $this->usersRep->getAll(),
+          'users' => Users::paginate(5),
         ));
     }
 

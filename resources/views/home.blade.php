@@ -27,7 +27,7 @@
                         <div class="icon">
                           <i class="ion-person-stalker"></i>
                         </div>
-                        <a href="/users" class="small-box-footer">Ver Todos <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/users') }}" class="small-box-footer">Ver Todos <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                     <!-- ./col -->
@@ -42,7 +42,7 @@
                         <div class="icon">
                           <i class="ion-bug"></i>
                         </div>
-                        <a href="/peixes" class="small-box-footer">Ver Todos <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/peixes') }}" class="small-box-footer">Ver Todos <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                     <!-- ./col -->
@@ -57,7 +57,7 @@
                         <div class="icon">
                           <i class="ion-android-cart"></i>
                         </div>
-                        <a href="/produtos" class="small-box-footer">Ver Todos <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/produtos') }}" class="small-box-footer">Ver Todos <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                     <!-- ./col -->
@@ -72,7 +72,7 @@
                         <div class="icon">
                           <i class="ion-leaf"></i>
                         </div>
-                        <a href="/plantas" class="small-box-footer">Ver Todas <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="{{ url('/plantas') }}" class="small-box-footer">Ver Todas <i class="fa fa-arrow-circle-right"></i></a>
                       </div>
                     </div>
                     <!-- ./col -->
@@ -112,7 +112,7 @@
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer text-center">
-                          <a href="/peixes" class="uppercase">Ver Todos</a>
+                          <a href="{{ url('/peixes') }}" class="uppercase">Ver Todos</a>
                         </div>
                         <!-- /.box-footer -->
                       </div>
@@ -152,7 +152,7 @@
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer text-center">
-                          <a href="/produtos" class="uppercase">Ver Todos</a>
+                          <a href="{{ url('/produtos') }}" class="uppercase">Ver Todos</a>
                         </div>
                         <!-- /.box-footer -->
                       </div>
@@ -191,7 +191,7 @@
                         </div>
                         <!-- /.box-body -->
                         <div class="box-footer text-center">
-                          <a href="/plantas" class="uppercase">Ver Todas</a>
+                          <a href="{{ url('/plantas') }}" class="uppercase">Ver Todas</a>
                         </div>
                         <!-- /.box-footer -->
                       </div>

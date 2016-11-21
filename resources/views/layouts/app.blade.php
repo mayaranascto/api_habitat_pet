@@ -14,16 +14,16 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> -->
 
     <!-- Styles -->
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/AdminLTE.css" rel="stylesheet">
-    <link href="css/skins/_all-skins.css" rel="stylesheet">
+    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/AdminLTE.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/skins/_all-skins.css') }}" rel="stylesheet">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome/css/font-awesome.min.css') }}">
 
     <!-- Scripts -->
     <script>
@@ -170,13 +170,13 @@
 
 
     <!-- Scripts -->
-    <!-- <script src="js/app.js"></script> -->
+    <!-- <script src="{{ URL::asset('js/app.js') }}"></script> -->
     <!-- jQuery -->
-    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/app-adm.js"></script>
-    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="{{ URL::asset('plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ URL::asset('js/bootstrap.js') }}"></script>
+    <script src="{{ URL::asset('js/app-adm.js') }}"></script>
+    <script src="{{ URL::asset('plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
     <!-- FastClick -->
-    <script src="plugins/fastclick/fastclick.js"></script>
+    <script src="{{ URL::asset('plugins/fastclick/fastclick.js') }}"></script>
 </body>
 </html>
